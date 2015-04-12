@@ -45,13 +45,16 @@ for page in pages:
 			title = title.replace('spend data','')
 			title = title.upper().strip()
 			csvYr = title.split(' ')[-1]
-			csvYr = csvYr.replace("200","20")
+			if csvYr > 2015:
+				print this will throw an error - cos then we have to add a new url
 			
 			csvMth = title.split(' ')[-2][:3]
 			csvMth = convert_mth_strings(csvMth);
 		
 			filename = entity_id + "_" + csvYr + "_" + csvMth
-		
+			
+			
+   				
 			todays_date = str(datetime.now())
 		
 			scraperwiki.sqlite.save(unique_keys=['l'], data={"l": fileUrl, "f": filename, "d": todays_date })
