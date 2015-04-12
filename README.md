@@ -1,1 +1,1 @@
-This is a scraper that runs on [Morph](https://morph.io). To get started [see the documentation](https://morph.io/documentation)
+This scraper only works until end of 2015, will need to be updated in 2016
