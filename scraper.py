@@ -46,7 +46,7 @@ for page in pages:
 			title = title.upper().strip()
 			csvYr = title.split(' ')[-1]
 			if csvYr > 2015:
-				print this will throw an error - cos then we have to add a new url
+				raise ValueError('Scraper only works until Dec 2015, recode')
 			
 			csvMth = title.split(' ')[-2][:3]
 			csvMth = convert_mth_strings(csvMth);
